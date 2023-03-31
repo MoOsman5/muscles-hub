@@ -11,6 +11,7 @@ const SignupSchema = Yup.object().shape({
 
 const Login = ({navigation}) => {
   return (
+
     <Formik
       initialValues={{
       email:'',
@@ -95,6 +96,7 @@ const Login = ({navigation}) => {
         </View>
       )}
     </Formik>
+
   );
 }
 

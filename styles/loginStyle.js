@@ -4,6 +4,7 @@ const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
+
   img: {
     height: screenHeight,
     width: screenWidth,
@@ -59,6 +60,7 @@ const styles = StyleSheet.create({
     fontSize:10,
     color:'#FF0D10'
   }
+
 
 });
 
