@@ -4,7 +4,7 @@ const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
-<<<<<<< HEAD
+
   img: {
     height: screenHeight,
     width: screenWidth,
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   }
-=======
+
     img: {
         height: screenHeight,
         width: screenWidth,
@@ -98,7 +98,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
       }
->>>>>>> e2aa95b7b86289842bb632d4b90f7380409d338d
 });
 
 export default styles;
