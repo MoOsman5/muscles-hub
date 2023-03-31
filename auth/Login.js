@@ -21,7 +21,9 @@ const Login = ({navigation}) => {
       // signin with user in firebase
 
       onSubmit={
-        //code here
+        (values)=>{ 
+          //code here
+        }
       }
     >
       {({values,errors,touched,handleChange,setFieldTouched,isValid,handleSubmit})=>(
