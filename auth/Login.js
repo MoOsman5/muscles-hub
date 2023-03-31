@@ -23,7 +23,15 @@ const Login = ({navigation}) => {
 
       onSubmit={
         (values)=>{ 
-          //code here
+          auth
+          .signInWithEmailAndPassword(values.email,values.password)
+          .then(userCredentials =>{
+            const user =userCredentials.user;
+            console.log('logged in with ',user.email);
+          })
+          .catch(error => alert(error.message))
+
+
         }
       }
     >

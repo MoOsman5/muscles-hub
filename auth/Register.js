@@ -58,7 +58,18 @@ const Register = ({navigation}) => {
 
       onSubmit={
         (values)=>{ 
-          //code here
+          auth
+          .createUserWithEmailAndPassword(values.email,values.password)
+          .then(userCredentials =>{
+            const user =userCredentials.user;
+            db.collection("users").doc(user.uid).set({
+              name:values.name,
+          })
+            navigation.navigate("Login")
+          })
+          .catch(error => alert(error.message))
+
+
         }
       }
       >
