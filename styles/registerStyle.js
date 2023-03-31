@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
   },
   button:{
     // backgroundColor:'#FF7F50',
+    backgroundColor:'#FF7F50',
     height: 40,
     width:220,
     padding: 10,
@@ -58,6 +59,7 @@ const styles = StyleSheet.create({
   errorTxt:{
     fontSize:10,
     color:'#FF0D10'
+
   }
 });
 
