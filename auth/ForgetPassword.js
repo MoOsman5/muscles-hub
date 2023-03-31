@@ -5,7 +5,7 @@ import styles from '../styles/forgetPasswordStyle';
 
 const ForgetPassword = () => {
   return (
-        //but code here 
+        //put code here 
   );
 }
 
