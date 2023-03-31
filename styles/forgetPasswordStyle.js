@@ -4,7 +4,7 @@ const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
-//but code here
+//put code here
 });
 
 export default styles;
