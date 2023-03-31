@@ -10,12 +10,12 @@ import 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBzzHDi5WEKURMcz7UlZqmLAB93_vt5YU8",
-  authDomain: "app1-ce39e.firebaseapp.com",
-  projectId: "app1-ce39e",
-  storageBucket: "app1-ce39e.appspot.com",
-  messagingSenderId: "78831971817",
-  appId: "1:78831971817:web:2c96d7af5a71fcedddef78"
+  apiKey: "AIzaSyA8Cq2ulblY9qubYVEy_rOCBSuy6esxb7s",
+  authDomain: "muscles-hub.firebaseapp.com",
+  projectId: "muscles-hub",
+  storageBucket: "muscles-hub.appspot.com",
+  messagingSenderId: "374469484120",
+  appId: "1:374469484120:web:55d44f8f1e03e5e290342d"
 };
 let app;
 if(firebase.apps.length=== 0){
