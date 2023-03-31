@@ -12,7 +12,7 @@ const Register = ({navigation}) => {
         <View style={styles.container}>
           <Text style={styles.text1}>Creat new Account</Text>
           <TouchableOpacity
-            onPress={()=>navigation.navigate("ForgetPassword")}
+            onPress={()=>navigation.navigate("Login")}
           >
           <Text style={styles.text2}>Already Registered?Log in here.</Text>
           </TouchableOpacity>
