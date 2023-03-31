@@ -5,7 +5,7 @@ import ForgetPassword from './ForgetPassword';
 
 const Login = ({navigation}) => {
   return (
-    //but code here
+    //put code here
   );
 }
 
