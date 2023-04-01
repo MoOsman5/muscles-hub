@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
     color:'white'
   },
   button:{
-    backgroundColor:'#FF7F50',
     height: 40,
     width:220,
     padding: 10,
@@ -50,7 +49,7 @@ const styles = StyleSheet.create({
     borderRadius:15,
     alignItems: 'center',
     justifyContent: 'center'
-  }
+  },
 
     img: {
         height: screenHeight,
