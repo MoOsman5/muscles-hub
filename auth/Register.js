@@ -4,6 +4,7 @@ import styles from '../styles/registerStyle';
 import { auth,db } from '../config/firebase';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { Firestore } from 'firebase/firestore';
 
 const SignupSchema = Yup.object().shape({
 
@@ -62,6 +63,7 @@ const Register = ({navigation}) => {
           .createUserWithEmailAndPassword(values.email,values.password)
           .then(userCredentials =>{
             const user =userCredentials.user;
+            // add data to Firestore
             db.collection("users").doc(user.uid).set({
               name:values.name,
           })
