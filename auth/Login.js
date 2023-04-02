@@ -1,9 +1,14 @@
 import React  from 'react';
-import { Text, View, TextInput, ImageBackground,TouchableOpacity,StatusBar  } from 'react-native';
+import { Text, View, TextInput, ImageBackground,TouchableOpacity,StatusBar,Button  } from 'react-native';
 import styles from '../styles/loginStyle';
-import { auth,db } from '../config/firebase';
+import { auth,providerf} from '../config/firebase';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import {signInWithGoogle} from "./signInWithGoogle"
+import {signInWithFacebook} from "./signInWithFacebook"
+
+
+// validation Schema
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email.').required('Please enter your email.'),
@@ -33,7 +38,9 @@ const Login = ({navigation}) => {
         }
       }
     >
+
       {({values,errors,touched,handleChange,setFieldTouched,isValid,handleSubmit})=>(
+        
         <View>
           <StatusBar barStyle={'light-content'}/>
           <ImageBackground
@@ -80,6 +87,24 @@ const Login = ({navigation}) => {
                     <Text style={styles.text}>Login</Text>
                   </TouchableOpacity>
 
+                  {/* login with google button    */}
+
+                  <TouchableOpacity
+                    style={[styles.button,{backgroundColor:'#FF7F50' }]} 
+                    onPress={signInWithGoogle}
+                    >
+                    <Text style={[styles.text,{fontSize:18}]}>Continue with Google</Text>
+                  </TouchableOpacity>
+
+                  {/* login with Facebook button    */}
+
+                <TouchableOpacity
+                    style={[styles.button,{backgroundColor:'#FF7F50' }]} 
+                    onPress={signInWithFacebook}
+                              >
+                  <Text style={[styles.text,{fontSize:18}]}>Continue with Facebook</Text>
+                </TouchableOpacity>
+
                   {/* ForgetPassword navigation */}
 
                   <TouchableOpacity
@@ -95,6 +120,7 @@ const Login = ({navigation}) => {
                   >
                     <Text style={styles.text3}>SignUp!</Text>
                   </TouchableOpacity>
+
 
 
                 </View>
