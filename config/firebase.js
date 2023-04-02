@@ -3,6 +3,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import 'firebase/firestore';
+import { GoogleAuthProvider ,FacebookAuthProvider} from "firebase/auth";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -26,8 +27,19 @@ if(firebase.apps.length=== 0){
 const passwordReset = (email) => {
   return firebase.auth().sendPasswordResetEmail(email)
 }
+const provider = new GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+provider.setCustomParameters({
+  'login_hint': 'user@example.com'
+});
+const providerf = new FacebookAuthProvider();
+providerf.addScope('user_birthday');
+providerf.setCustomParameters({
+  'display': 'popup'
+});
 
 const auth = firebase.auth();
 const db =firebase.firestore();
+auth.languageCode = 'it';
 
-export {auth,db,passwordReset};
+export {auth,db,passwordReset,provider,providerf};
