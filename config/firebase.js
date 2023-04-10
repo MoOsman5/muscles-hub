@@ -4,7 +4,7 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import 'firebase/firestore';
 import { GoogleAuthProvider ,FacebookAuthProvider} from "firebase/auth";
-// import { getStorage, ref } from "firebase/storage";
+import { getStorage, ref } from "firebase/storage";
 
 
 
@@ -55,7 +55,9 @@ providerf.setCustomParameters({
 
 const auth = firebase.auth();
 const db =firebase.firestore();
+const storage = getStorage();
+
 auth.languageCode = 'it';
 
 
-export {auth,db,passwordReset,provider,providerf};
+export {auth,db,passwordReset,provider,providerf,storage};
