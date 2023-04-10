@@ -25,7 +25,39 @@ export default class Protien extends Component {
   render() {
     return (
       <View style={styles.container}>
-       {/* code  */}
+        {/* <Ionicons name="ios-arrow-back" size={24} color="white" style={styles.back} onPress={()=>navigation.navigate('Shop')} /> */}
+
+        <Image source={{uri:"https://th.bing.com/th/id/R.ba10b128d0609664b7584f22339e67f2?rik=700FWvSyGm4hqQ&riu=http%3a%2f%2fwww.gnc.com%2fdw%2fimage%2fv2%2fBBLB_PRD%2fon%2fdemandware.static%2f-%2fSites-master-catalog-gnc%2fdefault%2fdwda4f9cec%2fhi-res%2f350260_1.jpg%3fsw%3d2000%26sh%3d2000%26sm%3dfit&ehk=T%2f%2bmq9fLSZKLRd%2fd5POrcc3YvUzityyhQLpjhpprUtc%3d&risl=&pid=ImgRaw&r=0"}} style={{ width: 200, height: 200  , marginTop: 20}} />
+        <Text style={styles.name}>{this.state.name}</Text>
+        <Text style={styles.price}>{this.state.price}</Text>
+        <Text style={styles.description}>{this.state.description}</Text>
+        <Button
+          title="Add to Cart"
+          icon={<Icon name="shopping-cart" color="white" />}
+          onPress={() => console.log('Add to cart')}
+          buttonStyle={styles.button}
+        />
+        <Image source={{uri:"https://th.bing.com/th/id/R.ba10b128d0609664b7584f22339e67f2?rik=700FWvSyGm4hqQ&riu=http%3a%2f%2fwww.gnc.com%2fdw%2fimage%2fv2%2fBBLB_PRD%2fon%2fdemandware.static%2f-%2fSites-master-catalog-gnc%2fdefault%2fdwda4f9cec%2fhi-res%2f350260_1.jpg%3fsw%3d2000%26sh%3d2000%26sm%3dfit&ehk=T%2f%2bmq9fLSZKLRd%2fd5POrcc3YvUzityyhQLpjhpprUtc%3d&risl=&pid=ImgRaw&r=0"}} style={{ width: 200, height: 200 , marginTop: 20 }} />
+        <Text style={styles.name}>{this.state.name}</Text>
+        <Text style={styles.price}>{this.state.price}</Text>
+        <Text style={styles.description}>{this.state.description}</Text>
+        <Button
+          title="Add to Cart"
+          icon={<Icon name="shopping-cart" color="white" />}
+          onPress={() => console.log('Add to cart')}
+          buttonStyle={styles.button}
+        />
+
+        <Image source={{uri:"https://th.bing.com/th/id/R.ba10b128d0609664b7584f22339e67f2?rik=700FWvSyGm4hqQ&riu=http%3a%2f%2fwww.gnc.com%2fdw%2fimage%2fv2%2fBBLB_PRD%2fon%2fdemandware.static%2f-%2fSites-master-catalog-gnc%2fdefault%2fdwda4f9cec%2fhi-res%2f350260_1.jpg%3fsw%3d2000%26sh%3d2000%26sm%3dfit&ehk=T%2f%2bmq9fLSZKLRd%2fd5POrcc3YvUzityyhQLpjhpprUtc%3d&risl=&pid=ImgRaw&r=0"}} style={{ width: 200, height: 200 , marginTop: 20}} />
+        <Text style={styles.name}>{this.state.name}</Text>
+        <Text style={styles.price}>{this.state.price}</Text>
+        <Text style={styles.description}>{this.state.description}</Text>
+        <Button
+          title="Add to Cart"
+          icon={<Icon name="shopping-cart" color="white" />}
+          onPress={() => console.log('Add to cart')}
+          buttonStyle={styles.button}
+        />
       </View>
     );
   }
