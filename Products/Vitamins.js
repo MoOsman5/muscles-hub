@@ -25,7 +25,39 @@ export default class Carb extends Component {
   render() {
     return (
       <View style={styles.container}>
-{/* code */}
+        {/* <Ionicons name="ios-arrow-back" size={24} color="white" style={styles.back} onPress={()=>navigation.navigate('Shop')} /> */}
+
+        <Image source={{uri:"https://th.bing.com/th/id/OIP.9vmvegcIwDT_gz1aucdpQQHaHa?pid=ImgDet&rs=1"}} style={{ width: 200, height: 200  , marginTop: 20}} />
+        <Text style={styles.name}>{this.state.name}</Text>
+        <Text style={styles.price}>{this.state.price}</Text>
+        <Text style={styles.description}>{this.state.description}</Text>
+        <Button
+          title="Add to Cart"
+          icon={<Icon name="shopping-cart" color="white" />}
+          onPress={() => console.log('Add to cart')}
+          buttonStyle={styles.button}
+        />
+        <Image source={{uri:"https://th.bing.com/th/id/OIP.9vmvegcIwDT_gz1aucdpQQHaHa?pid=ImgDet&rs=1"}} style={{ width: 200, height: 200 , marginTop: 20 }} />
+        <Text style={styles.name}>{this.state.name}</Text>
+        <Text style={styles.price}>{this.state.price}</Text>
+        <Text style={styles.description}>{this.state.description}</Text>
+        <Button
+          title="Add to Cart"
+          icon={<Icon name="shopping-cart" color="white" />}
+          onPress={() => console.log('Add to cart')}
+          buttonStyle={styles.button}
+        />
+
+        <Image source={{uri:"https://th.bing.com/th/id/OIP.9vmvegcIwDT_gz1aucdpQQHaHa?pid=ImgDet&rs=1"}} style={{ width: 200, height: 200 , marginTop: 20}} />
+        <Text style={styles.name}>{this.state.name}</Text>
+        <Text style={styles.price}>{this.state.price}</Text>
+        <Text style={styles.description}>{this.state.description}</Text>
+        <Button
+          title="Add to Cart"
+          icon={<Icon name="shopping-cart" color="white" />}
+          onPress={() => console.log('Add to cart')}
+          buttonStyle={styles.button}
+        />
       </View>
     );
   }
