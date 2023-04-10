@@ -4,6 +4,8 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import 'firebase/firestore';
 import { GoogleAuthProvider ,FacebookAuthProvider} from "firebase/auth";
+// import { getStorage, ref } from "firebase/storage";
+
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -38,8 +40,22 @@ providerf.setCustomParameters({
   'display': 'popup'
 });
 
+// const storage =firebase.storage();
+
+// Create a reference to 'mountains.jpg'
+// const mountainsRef = ref(storage, 'mountains.jpg');
+
+// Create a reference to 'images/mountains.jpg'
+// const mountainImagesRef = ref(storage, 'images/mountains.jpg');
+
+// While the file names are the same, the references point to different files
+// mountainsRef.name === mountainImagesRef.name;           // true
+// mountainsRef.fullPath === mountainImagesRef.fullPath;   // false 
+
+
 const auth = firebase.auth();
 const db =firebase.firestore();
 auth.languageCode = 'it';
+
 
 export {auth,db,passwordReset,provider,providerf};

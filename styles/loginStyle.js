@@ -4,6 +4,10 @@ const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
+  con:{
+    flex:1,
+    display:'flex'
+  },
 
   img: {
     height: screenHeight,
@@ -13,19 +17,21 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    top:70,
+    // top:70,
+    flexDirection:'column',
+    marginTop:175,
     alignItems: 'center',
     justifyContent: 'center',
   },
   input: {
-    width:220,
+    width:'100%',
     height: 40,
-    margin: 16,
+    margin: 10,
     borderWidth: 2,
     padding: 15,
     color:'white',
     borderRadius:15,
-    backgroundColor:'#303030',
+    backgroundColor:'#505050',
     border:0
   },
   text1:{
@@ -47,9 +53,8 @@ const styles = StyleSheet.create({
     color:'white'
   },
   button:{
-    // backgroundColor:'#FF7F50',
     height: 40,
-    width:220,
+    width:'100%',
     padding: 10,
     margin: 10,
     borderRadius:15,
@@ -59,6 +64,10 @@ const styles = StyleSheet.create({
   errorTxt:{
     fontSize:10,
     color:'#FF0D10'
+  },
+  v1:{
+    display:'flex',
+    flexDirection:'row'
   }
 
 
