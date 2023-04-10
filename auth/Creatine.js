@@ -8,7 +8,7 @@ const productImage = require('../images/logo.png');
 
 <Image source={productImage} style={{ width: 200, height: 200 }} />
 
-export default class Home extends Component {
+export default class Creatine extends Component {
   constructor(props) {
     super(props);
 
