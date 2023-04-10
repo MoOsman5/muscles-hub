@@ -1,12 +1,12 @@
 import React  from 'react';
-import { Text, View, TextInput, ImageBackground,TouchableOpacity,StatusBar,Button  } from 'react-native';
+import { Text, View, TextInput, ImageBackground,TouchableOpacity,StatusBar} from 'react-native';
 import styles from '../styles/loginStyle';
-import { auth,providerf} from '../config/firebase';
+import { auth} from '../config/firebase';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { SocialIcon } from 'react-native-elements'
 import {signInWithGoogle} from "./signInWithGoogle"
 import {signInWithFacebook} from "./signInWithFacebook"
-
 
 // validation Schema
 
@@ -33,6 +33,8 @@ const Login = ({navigation}) => {
           .then(userCredentials =>{
             const user =userCredentials.user;
             console.log('logged in with ',user.email);
+            navigation.navigate("Tabs")
+
           })
           .catch(error => alert(error.message))
         }
@@ -42,6 +44,7 @@ const Login = ({navigation}) => {
       {({values,errors,touched,handleChange,setFieldTouched,isValid,handleSubmit})=>(
         
         <View>
+          <splashScreen />
           <StatusBar barStyle={'light-content'}/>
           <ImageBackground
                 source={require('../images/login.png')}
@@ -87,23 +90,25 @@ const Login = ({navigation}) => {
                     <Text style={styles.text}>Login</Text>
                   </TouchableOpacity>
 
-                  {/* login with google button    */}
+                  <Text style={styles.text2}>Or Signin with</Text>
 
-                  <TouchableOpacity
-                    style={[styles.button,{backgroundColor:'#FF7F50' }]} 
-                    onPress={signInWithGoogle}
-                    >
-                    <Text style={[styles.text,{fontSize:18}]}>Continue with Google</Text>
-                  </TouchableOpacity>
+                  <View style={styles.v1}>
+                      {/* login with google button    */}
 
-                  {/* login with Facebook button    */}
+                    <SocialIcon
+                      type='google'
+                      onPress={signInWithFacebook}
+                    />
 
-                <TouchableOpacity
-                    style={[styles.button,{backgroundColor:'#FF7F50' }]} 
-                    onPress={signInWithFacebook}
-                              >
-                  <Text style={[styles.text,{fontSize:18}]}>Continue with Facebook</Text>
-                </TouchableOpacity>
+                    {/* login with Facebook button    */}
+
+                    <SocialIcon
+                      type='facebook'
+                      onPress={signInWithFacebook}
+                    />
+                  </View>
+
+                  
 
                   {/* ForgetPassword navigation */}
 
