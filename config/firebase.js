@@ -4,6 +4,7 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import 'firebase/firestore';
 import { GoogleAuthProvider ,FacebookAuthProvider} from "firebase/auth";
+import { getStorage, ref } from "firebase/storage";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -41,5 +42,8 @@ providerf.setCustomParameters({
 const auth = firebase.auth();
 const db =firebase.firestore();
 auth.languageCode = 'it';
+export const storage = getStorage(app);
+
+
 
 export {auth,db,passwordReset,provider,providerf};

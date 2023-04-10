@@ -5,7 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from './auth/Login'
 import Register from './auth/Register'
 import ForgetPassword from './auth/ForgetPassword'
-
+import Uploadimage from './auth/UploadImage';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -26,6 +26,8 @@ export default function App() {
           name="ForgetPassword"
           component={ForgetPassword}
         />
+      <Stack.Screen name="UploadImage"
+      component={UploadImage}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
