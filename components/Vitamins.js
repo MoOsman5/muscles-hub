@@ -9,7 +9,7 @@ const productImage = require('./images/aa.jpg');
 
 <Image source={productImage} style={{ width: 200, height: 200 }} />
 
-export default class Vitamins extends Component {
+export default class Vitamene extends Component {
   constructor(props) {
     super(props);
 
@@ -24,7 +24,8 @@ export default class Vitamins extends Component {
   render() {
     return (
       <View style={styles.container}>
-    <Image source={productImage} style={{ width: 200, height: 200  , marginTop: 20}} />
+  
+  <Image source={{uri:"https://th.bing.com/th/id/OIP.9vmvegcIwDT_gz1aucdpQQHaHa?pid=ImgDet&rs=1"}} style={{ width: 200, height: 200  , marginTop: 20}} />
         <Text style={styles.name}>{this.state.name}</Text>
         <Text style={styles.price}>{this.state.price}</Text>
         <Text style={styles.description}>{this.state.description}</Text>
@@ -34,7 +35,7 @@ export default class Vitamins extends Component {
           onPress={() => console.log('Add to cart')}
           buttonStyle={styles.button}
         />
- <Image source={productImage} style={{ width: 200, height: 200 , marginTop: 20 }} />
+        <Image source={{uri:"https://th.bing.com/th/id/OIP.9vmvegcIwDT_gz1aucdpQQHaHa?pid=ImgDet&rs=1"}} style={{ width: 200, height: 200 , marginTop: 20 }} />
         <Text style={styles.name}>{this.state.name}</Text>
         <Text style={styles.price}>{this.state.price}</Text>
         <Text style={styles.description}>{this.state.description}</Text>
@@ -45,7 +46,7 @@ export default class Vitamins extends Component {
           buttonStyle={styles.button}
         />
 
-<Image source={productImage} style={{ width: 200, height: 200 , marginTop: 20}} />
+        <Image source={{uri:"https://th.bing.com/th/id/OIP.9vmvegcIwDT_gz1aucdpQQHaHa?pid=ImgDet&rs=1"}} style={{ width: 200, height: 200 , marginTop: 20}} />
         <Text style={styles.name}>{this.state.name}</Text>
         <Text style={styles.price}>{this.state.price}</Text>
         <Text style={styles.description}>{this.state.description}</Text>
