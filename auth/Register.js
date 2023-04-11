@@ -50,7 +50,9 @@ const Register = ({navigation}) => {
         name:'',
         email:'',
         password:'',
-        comfirmPassword:''
+        comfirmPassword:'',
+        birthDate:'',
+        phone:'',
         }}
       validationSchema={SignupSchema}
 
@@ -67,6 +69,8 @@ const Register = ({navigation}) => {
             
             db.collection("users").doc(user.uid).set({
               name:values.name,
+              phone:values.phone,
+              birthDate:values.birthDate
           })
             navigation.navigate("Login")
           })
@@ -148,6 +152,23 @@ const Register = ({navigation}) => {
               {/* comfirm password validation error text */}
 
               {touched.comfirmPassword && errors.confirmPassword && (<Text style={styles.errorTxt}>{errors.confirmPassword}</Text>)}
+
+              <TextInput
+                placeholder="Phone"
+                value={values.phone}
+                autoCapitalize={false}
+                onChangeText={handleChange('phone')}
+                onBlur={()=> setFieldTouched('phone')}
+                style={styles.input} />
+
+              <TextInput
+                placeholder="Birth Date"
+                value={values.birthDate}
+                autoCapitalize={false}
+                onChangeText={handleChange('birthDate')}
+                onBlur={()=> setFieldTouched('birthDate')}
+                style={styles.input} />
+
 
               {/* sign up button  */}
 
