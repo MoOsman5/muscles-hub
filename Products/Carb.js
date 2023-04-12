@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, Text, StyleSheet } from 'react-native';
+import { View, Image, Text, StyleSheet ,ScrollView} from 'react-native';
 import { Button, Icon } from 'react-native-elements';
 const productImage = require('../images/logo.png');
 import { AntDesign,Ionicons } from '@expo/vector-icons'; 
@@ -24,6 +24,7 @@ export default class Carb extends Component {
 
   render() {
     return (
+      <ScrollView>
       <View style={styles.container}>
         {/* <Ionicons name="ios-arrow-back" size={24} color="white" style={styles.back} onPress={()=>navigation.navigate('Shop')} /> */}
 
@@ -59,6 +60,7 @@ export default class Carb extends Component {
           buttonStyle={styles.button}
         />
       </View>
+      </ScrollView>
     );
   }
 }
