@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, StyleSheet,Text,Image,TouchableOpacity} from 'react-native';
+import {View, StyleSheet,Text,Image,TouchableOpacity,ScrollView} from 'react-native';
 import styles from '../styles/shopStyle';
 
 const Shop = ({navigation}) => {
   return (
+    <ScrollView style={{backgroundColor:'#303030'}}>
     <View  style={styles.containr}>
       <Text style={styles.mainText}>Choose the item you want to buy </Text>
       <View style={styles.containr2}>
@@ -77,13 +78,14 @@ const Shop = ({navigation}) => {
             source={{uri:'https://max.test.centrierp.com/web/image/1368245/fitness-img.jpg'}}
             style={styles.img}
             />
-            <Text style={styles.bText}>Fitness Equipment's</Text>
+            <Text style={[styles.bText,{fontSize:18}]}>Fitness Equipment's</Text>
 
         </TouchableOpacity>
 
       </View>
       
   </View>
+  </ScrollView>
   );
 }
 
