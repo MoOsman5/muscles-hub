@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, Text, StyleSheet } from 'react-native';
+import { View, Image, Text, StyleSheet ,ScrollView} from 'react-native';
 import { Button, Icon } from 'react-native-elements';
 const productImage = require('../images/logo.png');
 import { AntDesign,Ionicons } from '@expo/vector-icons'; 
@@ -24,41 +24,43 @@ export default class FitEquipment extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        {/* <Ionicons name="ios-arrow-back" size={24} color="white" style={styles.back} onPress={()=>navigation.navigate('Shop')} /> */}
+      <ScrollView>
+        <View style={styles.container}>
+          {/* <Ionicons name="ios-arrow-back" size={24} color="white" style={styles.back} onPress={()=>navigation.navigate('Shop')} /> */}
 
-        <Image source={{uri:"https://i.pinimg.com/originals/e8/58/44/e858448a81401fb14e81c50523dc661e.jpg"}} style={{ width: 200, height: 200  , marginTop: 20}} />
-        <Text style={styles.name}>{this.state.name}</Text>
-        <Text style={styles.price}>{this.state.price}</Text>
-        <Text style={styles.description}>{this.state.description}</Text>
-        <Button
-          title="Add to Cart"
-          icon={<Icon name="shopping-cart" color="white" />}
-          onPress={() => console.log('Add to cart')}
-          buttonStyle={styles.button}
-        />
-        <Image source={{uri:"https://i.pinimg.com/originals/e8/58/44/e858448a81401fb14e81c50523dc661e.jpg"}} style={{ width: 200, height: 200 , marginTop: 20 }} />
-        <Text style={styles.name}>{this.state.name}</Text>
-        <Text style={styles.price}>{this.state.price}</Text>
-        <Text style={styles.description}>{this.state.description}</Text>
-        <Button
-          title="Add to Cart"
-          icon={<Icon name="shopping-cart" color="white" />}
-          onPress={() => console.log('Add to cart')}
-          buttonStyle={styles.button}
-        />
+          <Image source={{uri:"https://i.pinimg.com/originals/e8/58/44/e858448a81401fb14e81c50523dc661e.jpg"}} style={{ width: 200, height: 200  , marginTop: 20}} />
+          <Text style={styles.name}>{this.state.name}</Text>
+          <Text style={styles.price}>{this.state.price}</Text>
+          <Text style={styles.description}>{this.state.description}</Text>
+          <Button
+            title="Add to Cart"
+            icon={<Icon name="shopping-cart" color="white" />}
+            onPress={() => console.log('Add to cart')}
+            buttonStyle={styles.button}
+          />
+          <Image source={{uri:"https://i.pinimg.com/originals/e8/58/44/e858448a81401fb14e81c50523dc661e.jpg"}} style={{ width: 200, height: 200 , marginTop: 20 }} />
+          <Text style={styles.name}>{this.state.name}</Text>
+          <Text style={styles.price}>{this.state.price}</Text>
+          <Text style={styles.description}>{this.state.description}</Text>
+          <Button
+            title="Add to Cart"
+            icon={<Icon name="shopping-cart" color="white" />}
+            onPress={() => console.log('Add to cart')}
+            buttonStyle={styles.button}
+          />
 
-        <Image source={{uri:"https://i.pinimg.com/originals/e8/58/44/e858448a81401fb14e81c50523dc661e.jpg"}} style={{ width: 200, height: 200 , marginTop: 20}} />
-        <Text style={styles.name}>{this.state.name}</Text>
-        <Text style={styles.price}>{this.state.price}</Text>
-        <Text style={styles.description}>{this.state.description}</Text>
-        <Button
-          title="Add to Cart"
-          icon={<Icon name="shopping-cart" color="white" />}
-          onPress={() => console.log('Add to cart')}
-          buttonStyle={styles.button}
-        />
-      </View>
+          <Image source={{uri:"https://i.pinimg.com/originals/e8/58/44/e858448a81401fb14e81c50523dc661e.jpg"}} style={{ width: 200, height: 200 , marginTop: 20}} />
+          <Text style={styles.name}>{this.state.name}</Text>
+          <Text style={styles.price}>{this.state.price}</Text>
+          <Text style={styles.description}>{this.state.description}</Text>
+          <Button
+            title="Add to Cart"
+            icon={<Icon name="shopping-cart" color="white" />}
+            onPress={() => console.log('Add to cart')}
+            buttonStyle={styles.button}
+          />
+        </View>
+      </ScrollView>
     );
   }
 }
